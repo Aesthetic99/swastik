@@ -1,0 +1,68 @@
+/* Global styles for Restaurant Management System */
+:root{
+  --bg:#f7fafc;
+  --card:#ffffff;
+  --muted:#6b7280;
+  --primary:#0b77d6;
+  --accent:#ff6b3d;
+  --success:#16a34a;
+  --danger:#ef4444;
+  --radius:8px;
+  --max-width:1100px;
+  --gap:18px;
+  font-synthesis: none;
+}
+/* Glass effect */
+.glass{
+  background: rgba(255,255,255,0.55);
+  backdrop-filter: blur(8px) saturate(120%);
+  -webkit-backdrop-filter: blur(8px) saturate(120%);
+  border: 1px solid rgba(255,255,255,0.4);
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;font-family:Inter,Segoe UI,Arial,Helvetica,sans-serif;background:var(--bg);color:#111827}
+.container{max-width:var(--max-width);margin:24px auto;padding:20px}
+header.app-header{background:linear-gradient(90deg,#ffffffcc,var(--bg));box-shadow:0 1px 3px rgba(2,6,23,0.06);border-radius:10px;padding:18px;margin-bottom:20px;display:flex;align-items:center;justify-content:space-between}
+header.app-header h1{margin:0;font-size:20px;color:var(--primary)}
+nav.app-nav ul{list-style:none;margin:0;padding:0;display:flex;gap:12px}
+nav.app-nav a{display:inline-block;padding:8px 12px;border-radius:8px;text-decoration:none;color:var(--primary);font-weight:600}
+nav.app-nav a:hover{background:#eef6ff}
+.main{display:block;background:transparent}
+.card{background:var(--card);padding:16px;border-radius:var(--radius);box-shadow:0 6px 18px rgba(15,23,42,0.06);margin-bottom:16px}
+.grid{display:grid;gap:var(--gap)}
+.grid.cols-3{grid-template-columns:repeat(3,1fr)}
+.grid.cols-2{grid-template-columns:repeat(2,1fr)}
+.badge{display:inline-block;padding:6px 10px;border-radius:999px;background:#eef2ff;color:var(--primary);font-weight:600}
+.table{width:100%;border-collapse:collapse;background:var(--card);border-radius:8px;overflow:hidden}
+.table th,.table td{padding:12px 14px;text-align:left;border-bottom:1px solid #f1f5f9}
+.table th{background:linear-gradient(180deg,#fafafa,#fff);font-weight:700}
+.btn{display:inline-block;padding:8px 12px;border-radius:8px;border:0;background:var(--primary);color:white;text-decoration:none;cursor:pointer}
+.btn.secondary{background:#eef2ff;color:var(--primary);font-weight:700}
+.btn.ghost{background:transparent;border:1px solid #e6eefc;color:var(--primary)}
+.form-row{display:flex;gap:12px;align-items:center;margin-bottom:12px}
+.form-row label{min-width:120px;color:var(--muted)}
+input[type=text],input[type=password],input[type=number],select,textarea{width:100%;padding:10px;border-radius:8px;border:1px solid #e6eefc;background:white}
+input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-spin-button{appearance:none}
+.alert{padding:10px 12px;border-radius:8px;margin-bottom:12px}
+.alert.success{background:#ecfdf5;color:var(--success)}
+.alert.error{background:#fff1f2;color:var(--danger)}
+.small{font-size:13px;color:var(--muted)}
+.footer{margin-top:28px;text-align:center;color:var(--muted);font-size:13px}
+@media (max-width:900px){
+  .grid.cols-3{grid-template-columns:repeat(1,1fr)}
+  header.app-header{flex-direction:column;align-items:flex-start;gap:12px}
+  nav.app-nav ul{flex-wrap:wrap}
+  .form-row{flex-direction:column;align-items:flex-start}
+  .form-row label{min-width:0}
+}
+/* Utility spacing */
+.mt-8{margin-top:8px}
+.mb-8{margin-bottom:8px}
+.text-right{text-align:right}
+.center{text-align:center}
+/* Responsive tables */
+.table-responsive{overflow:auto;border-radius:8px}
+/* subtle focus */
+input:focus,select:focus,textarea:focus{outline:none;box-shadow:0 0 0 4px rgba(11,119,214,0.08);border-color:var(--primary)}
+/* tiny form button style */
+button.btn.inline{padding:6px 8px;font-size:14px}
