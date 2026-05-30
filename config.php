@@ -5,10 +5,10 @@ if (session_status() === PHP_SESSION_NONE) {
 }
 
 // Database Configuration
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "restaurant_db";
+$servername = "<databse-server>";
+$username = "<username>";
+$password = "<password>";
+$dbname = "<database-name>";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
